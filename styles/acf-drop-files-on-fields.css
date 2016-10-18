@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+.acf-field .uploader-acf-field {
+  background: rgba(150, 150, 150, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99998;
+  /* under the toolbar */
+  display: none;
+  text-align: center;
+}
+.acf-field .uploader-editor-content {
+  border: 1px dashed #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+.acf-field .uploader-acf-field .uploader-editor-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 3em;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.acf-field .uploader-acf-field.droppable {
+  background: rgba(0, 86, 132, 0.9);
+}
+.acf-field .uploader-acf-field.droppable .uploader-editor-title {
+  display: block;
+}
+#acf-drop-files-on-fields .code-block pre {
+  overflow: hidden;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+#acf-drop-files-on-fields .code-block pre code {
+  display: block;
+}
+#acf-drop-files-on-fields .code-block:not(.expanded) pre {
+  height: 120px !important;
+}
