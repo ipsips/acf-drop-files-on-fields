@@ -8,13 +8,13 @@ class ACF_Drop_Files_On_Fields_Settings {
     $this->options = get_option('acf_drop_files_on_fields_options', self::get_default_options());
     $this->title = __('Drop Files on Fields', 'acf-drop-files-on-fields');
 
-    register_uninstall_hook(__FILE__, [$this, 'on_uninstall']);
+    register_uninstall_hook(__FILE__, ['ACF_Drop_Files_On_Fields_Settings', 'on_uninstall']);
     add_action('admin_menu', [$this, 'add_admin_menu_item'], 99);
     add_action('admin_init', [$this, 'register_settings']);
     add_filter('plugin_action_links_acf-drop-files-on-fields/acf-drop-files-on-fields.php', [$this, 'add_plugin_action_links']);
   }
 
-  function on_uninstall() {
+  static function on_uninstall() {
     delete_option('acf_drop_files_on_fields_options');
     delete_site_option('acf_drop_files_on_fields_options'); // multisite
   }
