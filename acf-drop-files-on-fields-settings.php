@@ -22,7 +22,7 @@ class ACF_Drop_Files_On_Fields_Settings {
   function add_plugin_action_links($actions) {
     return array_merge([
       'settings' => sprintf(
-        '<a href="%soptions-general.php?page=acf_drop_files_on_fields_options">%s</a>',
+        '<a href="%sedit.php?post_type=acf-field-group&page=acf_drop_files_on_fields_options">%s</a>',
         admin_url(),
         __('Settings', 'acf-drop-files-on-fields')
       )
